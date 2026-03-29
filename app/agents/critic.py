@@ -63,7 +63,7 @@ from app.utils.graph_state import GraphState
 log = logging.getLogger("codelineage.critic")
 
 # GAP D FIX: remove hardcoded fallback key — fail loudly if env var is absent.
-_GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY","AIzaSyAFMIMk3LMIS_djL4b3gXQcoYmW8JUOGp4")
+_GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY","")
 if not _GEMINI_API_KEY:
     raise ValueError(
         "GEMINI_API_KEY environment variable is not set. "
